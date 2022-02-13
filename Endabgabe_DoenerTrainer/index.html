@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant-Simulation</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="src/Meal.js"></script>
+    <script src="src/Doener.js"></script>
+    <script src="src/Item.js"></script>
+    <script src="src/Lahmacun.js"></script>
+    <script src="src/Yufka.js"></script>
+    <script src="src/Entity.js"></script>
+    <script src="src/Counter.js"></script>
+    <script src="src/Place.js"></script>
+    <script src="src/Bin.js"></script>
+    <script src="src/Storage.js"></script>
+    <script srC="src/WorkPlace.js"></script>
+    <script src="src/Customer.js"></script>
+    <script src="src/Employee.js"></script>
+    <script src="src/Vector.js"></script>
+    <script src="src/Trainer.js"></script>
+    <script src="src/index.js"></script>
+
+</head>
+<body>
+<div id="start">
+    <h1>Döner-Trainer</h1>
+    <div id="start-container">
+        <div id="labels">
+            <label>Anzahl Angestellte</label>
+            <label>Kunde/Minute</label>
+            <label>Kapazität Lager</label>
+            <label>Leerlauf Mitarbeiter</label>
+        </div>
+        <div id="values">
+            <input id="employees" max="10" min="1" type="number" value="4">
+            <input id="customersmin" max="20" min="1" type="number" value="1">
+            <input id="storage" max="100" min="1" type="number" value="50">
+            <input id="employeetime" max="10" min="1" type="number" value="10">
+        </div>
+    </div>
+    <button id="startBtn">Start</button>
+</div>
+<div id="root">
+    <div id="menu">
+        <button id="exit">Exit</button>
+        <h1>Döner-Trainer</h1>
+        <div id="fieldsets">
+            <fieldset>
+                <legend>Zufriedenheit & Stimmung</legend>
+                <div id="customerstatus">
+                    <div><img src="images/Kunde_zufrieden.png"> <input id="zufrieden" readonly value=""></div>
+                    <div><img src="images/Kunde_genervt.png"><input id="genervt" readonly value=""></div>
+                    <div><img src="images/Kunde_veraergert.png"><input id="veraergert" readonly value=""></div>
+                </div>
+                <div id="employeestatus">
+                    <div><img src="images/Mitarbeiter_normal.png"><input id="normal" readonly value=""></div>
+                    <div><img src="images/Mitarbeiter_schlaefrig.png"><input id="schlaefrig" readonly value=""></div>
+                    <div><img src="images/Mitarbeiter_gestresst.png"><input id="gestresst" readonly value=""></div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Verkäufe</legend>
+                <div id="sold">
+                    <div><span>Döner</span> <input id="doener_count" readonly value=""></div>
+                    <div><span>Lahmacun</span> <input id="lahmacun_count" readonly value=""></div>
+                    <div><span>Yufka</span> <input id="yufka_count" readonly value=""></div>
+                    <hr/>
+                    <div><span>Gesamt</span> <input id="gesamt_count" readonly value=""></div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <canvas height="800" id="cv" width="600"></canvas>
+</div>
+</body>
+</html>
